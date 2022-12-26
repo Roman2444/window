@@ -12,6 +12,7 @@ module.exports = {
   },
   rules: {
     linebreak-style: 0,
-    indent: 'off',
+    // indent: 'off',
+    "semi-style": ["error", "last"],
   },
 };
