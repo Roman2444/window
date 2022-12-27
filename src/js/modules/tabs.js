@@ -23,7 +23,7 @@ const tabs = (headerSelector, tabselector, contentSelector, activeClass) => {
 
     header.addEventListener('click', (e) => {
         const target = e.target;
-        if ( target &&
+        if (target &&
            (target.classList.contains(tabselector.replace(/\./, '')) ||
         target.parentNode.classList.contains(tabselector.replace(/\./, '')))) {
             tab.forEach((item, i) => {
