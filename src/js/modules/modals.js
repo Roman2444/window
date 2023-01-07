@@ -22,10 +22,12 @@ const modals = () => {
             document.body.style.overflow = '';
         });
 
-        modal.addEventListener('click', () => {
-            modal.style.display = 'none';
-            // document.body.classList.remove('modal-open')
-            document.body.style.overflow = '';
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                // document.body.classList.remove('modal-open')
+                document.body.style.overflow = '';
+            }
         });
     }
 
