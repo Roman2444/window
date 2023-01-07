@@ -1,4 +1,4 @@
-const tabs = (headerSelector, tabselector, contentSelector, activeClass) => {
+const tabs = (headerSelector, tabselector, contentSelector, activeClass, display = "block") => {
     const header = document.querySelector(headerSelector),
           tab = document.querySelectorAll(tabselector),
           content = document.querySelectorAll(contentSelector);
@@ -14,7 +14,7 @@ const tabs = (headerSelector, tabselector, contentSelector, activeClass) => {
     };
 
     function showTabContent(i = 0) {
-        content[i].style.display = 'block';
+        content[i].style.display = display;
         tab[i].classList.add(activeClass);
     }
 
