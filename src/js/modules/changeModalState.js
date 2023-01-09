@@ -4,8 +4,8 @@ const changeModalState = (state) => {
     const windowForm = document.querySelectorAll('.balcon_icons_img'),
           windowWith = document.querySelectorAll('#width'),
           windowHeight = document.querySelectorAll('#height'),
-          indowType = document.querySelectorAll('#view_type'),
-          indowProfile= document.querySelectorAll('.checkbox');
+          windowType = document.querySelectorAll('#view_type'),
+          windowProfile= document.querySelectorAll('.checkbox');
 
     checkNumInputs('#width');
     checkNumInputs('#height');
@@ -25,6 +25,8 @@ const changeModalState = (state) => {
     bindActionsToElems('click', windowForm, 'form');
     bindActionsToElems('input', windowWith, 'width');
     bindActionsToElems('input', windowHeight, 'height');
+    bindActionsToElems('change', windowType, 'windowType');
+    bindActionsToElems('change', windowProfile, 'windowProfile');
 
 
     // windowForm.forEach((item, i) => {
