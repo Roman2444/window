@@ -1,4 +1,4 @@
-import checkNumInputs from "./modules/checkNumInputs";
+import checkNumInputs from "./checkNumInputs";
 
 const forms = (modalState) => {
     const form = document.querySelectorAll('form'),
