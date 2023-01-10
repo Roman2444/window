@@ -4,17 +4,16 @@ const timer = (id, deadline) => {
         let days, seconds, minutes, hours;
 
         const t = Date.parse(endtime) - Date.parse(new Date());
-
         if (t <= 0) {
-            days = 0;
-            seconds = 0; 
-            minutes = 0;
-            hours = 0;
+            days = '00';
+            seconds = '00';
+            minutes = '00';
+            hours = '00';
         } else {
-            days = Math.floor((t/(1000*60*60*24))),
-            seconds = Math.floor( (t/1000) % 60),
-            minutes = Math.floor( (t/1000/60) % 60),
-            hours = Math.floor(t/(1000*60*60) % 24);
+            days = Math.floor((t / (1000 * 60 * 60 * 24))),
+            seconds = Math.floor((t / 1000) % 60),
+            minutes = Math.floor((t / 1000 / 60) % 60),
+            hours = Math.floor(t / (1000 * 60 * 60) % 24);
         }
 
         return {
@@ -23,9 +22,8 @@ const timer = (id, deadline) => {
             'hours': hours,
             'minutes': minutes,
             'seconds': seconds
-            };
+        };
     }
-
 
     function setClock(selector, endtime) {
 
@@ -53,18 +51,8 @@ const timer = (id, deadline) => {
             hours.textContent = getZero(t.hours);
             minutes.textContent = getZero(t.minutes);
             seconds.textContent = getZero(t.seconds);
-
-            if (t.total <= 0) {
-                clearInterval(timeInterval);
-                days.textContent = "00";
-                hours.textContent = "00";
-                minutes.textContent = "00";
-                seconds.textContent = "00";
-
-            }
         }
     }
-
     setClock(id, deadline);
 
 };

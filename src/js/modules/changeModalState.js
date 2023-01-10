@@ -31,13 +31,14 @@ const changeModalState = (state) => {
                         }
                         break;
                     case 'SELECT' :
-                        state[prop] = item.value; ;
+                        state[prop] = item.value;
                         break;
                 }
                 console.log(state);
             });
         });
-    };
+    }
+    
     bindActionsToElems('click', windowForm, 'form');
     bindActionsToElems('input', windowWith, 'width');
     bindActionsToElems('input', windowHeight, 'height');
